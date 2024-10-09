@@ -17,8 +17,12 @@ Route::get('/', function () {
     return view('systems');
 });
 
-Route::get('/create', function () {
-    return view('create');
+Route::get('/nintendo', function () {
+    return view('nintendo');
+});
+
+Route::get('/playstation', function () {
+    return view('playstation');
 });
 
 Route::post('/create', function () {
