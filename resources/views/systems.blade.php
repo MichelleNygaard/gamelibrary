@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Quarters</title>
     <style>
-        body {
-            background-image: linear-gradient(#1D5D79, #357C9A); /* Gradient background */
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 100%;
             margin: 0;
-            padding: 20px;
+        }
+        body {
+            background-image: linear-gradient(to top right, #0E1F33,#0D2237,#132D46,#152F48,#283150,#312A4C,#332244,#311C3B,#22152F,#151329,#15162B); /* Gradient background */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
         }
 
         .container {
