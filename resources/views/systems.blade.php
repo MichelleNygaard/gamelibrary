@@ -30,7 +30,7 @@
         }
 
         .chip {
-            background-color: #1D5D79;
+            background-color: transparent;
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
