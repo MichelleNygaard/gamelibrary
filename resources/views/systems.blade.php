@@ -31,8 +31,10 @@
 
         h1 {
             margin: 0; /* removes the default margin */
+            margin-left: 10px;
+            margin-top: 10px;
             color: white;
-
+            font-family: "Press Start 2P";
         }
 
         .chip {
@@ -42,11 +44,12 @@
             border-radius: 5px;
             margin-top: 10px;
             font-weight: bold;
+            margin-left: 25px;
         }
 
         .search-bar {
             padding: 5px 10px;
-            border-radius: 5px;
+            border-radius: 25px;
             border: 1px solid #ccc;
             margin-right: 5px;
         }
