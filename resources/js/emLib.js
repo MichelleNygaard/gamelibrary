@@ -1,16 +1,30 @@
 
+    // funktion til sortering
+    document.getElementById('sort').addEventListener('change', function () {
+    var selectedSort = this.value;
+    var animalCrossing = document.getElementById('animal-crossing');
+    var luigisMansion = document.getElementById('luigis-mansion-3');
+    var marioParty = document.getElementById('mario-party-2');
 
-document.getElementById('search').addEventListener('input', function() {
-    const searchTerm = this.value.toLowerCase();
-    const articles = document.querySelectorAll('article');
+    // Hvis kun spil hvis sortering passer
+    if (selectedSort === 'switch') {
+    animalCrossing.style.display = 'block';
+    luigisMansion.style.display = 'block';
+} else {
+    animalCrossing.style.display = 'none';
+    luigisMansion.style.display = 'none';
+}
+    if (selectedSort === 'N64') {
+    marioParty.style.display = 'block';
 
-    articles.forEach(article => {
-        const title = article.querySelector('h2').textContent.toLowerCase();
-        if (title.includes(searchTerm)) {
-            article.style.display = 'block'; // Show matching articles
-        } else {
-            article.style.display = 'none'; // Hide non-matching articles
-        }
-    });
+} else {
+    marioParty.style.display = 'none';
+
+}
 });
+
+    // Alle spil er hidden indtil sortering vælges
+    //window.onload = function() {
+    // document.getElementById('animal-crossing').style.display = 'none';
+    // };
 
