@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,19 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('systems');
-});
+Route::resource('games', GameController::class);
 
-Route::get('/nintendo', function () {
-    return view('nintendo');
-});
-
-Route::get('/playstation', function () {
-    return view('playstation');
-});
-
-Route::post('/create', function () {
-    // Handle form submission logic here
-    return redirect('/');
-});
+//Route::get('/', function () {
+//    return view('systems');
+//});
+//
+//Route::get('/nintendo', function () {
+//    return view('nintendo');
+//});
+//
+//Route::get('/playstation', function () {
+//    return view('playstation');
+//});
+//
+//Route::post('/create', function () {
+//    // Handle form submission logic here
+//    return redirect('/');
+//});
