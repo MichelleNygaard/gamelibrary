@@ -30,6 +30,11 @@
                 <input type="url" name="image_url" id="image_url" placeholder="Enter image URL (optional)">
             </div>
 
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" placeholder="Optional">
+            </div>
+
 {{--            <div class="form-group">--}}
 {{--                <label for="image_upload">Upload Image:</label>--}}
 {{--                <input type="file" name="image_upload" id="image_upload" accept="image/*">--}}
