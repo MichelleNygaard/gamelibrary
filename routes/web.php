@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\Auth\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,24 @@ use App\Http\Controllers\GameController;
 Route::resource('games', GameController::class);
 Route::get('/games/create', [GameController::class, 'create'])->name('games.create');
 Route::post('/games', [GameController::class, 'store'])->name('games.store');
+
+// Routes for login, registration and logout
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard'); // Return the dashboard view
+    })->name('dashboard');
+
+    // You can add more protected routes here
+});
+
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
 
 //Route::get('/', function () {
 //    return view('systems');
